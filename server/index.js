@@ -14,12 +14,18 @@ app.listen(3001, ()=>{
     console.log("You are listening on port 3001");
 })
 
-app.get("/",(req,res)=>{
-
-    const sqlQurry1="INSERT INTO randomquptes (name, quote) VALUES ('Brittany Murphy','Everybody has difficult years, but a lot of times the difficult years end up being the greatest years of your whole entire life, if you survive them');";
-
-    db.query(sqlQurry1,(err,result)=>{
-        res.send("Values inserted");
+app.get("/quoteAPI",(req,res)=>{
+    query1 = "SELECT * FROM randomquoteslist. randomquotes";
+    const quoteslist=[];
+    db.query(query1,(err,result)=>{
+        //create a quote object from the data pulled from database that will then be pushed to the quoteslist and sent to the API
+        quote={};
+        for(var i=0; i<result.length;i++){
+            quote["name"]=result[i].name;
+            quote["quote"]=result[i].quote;
+            quoteslist.push(quote);
+        }
+        res.send({quoteslist});
     })
     
 })

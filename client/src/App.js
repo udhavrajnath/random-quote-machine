@@ -1,10 +1,14 @@
 import './App.css';
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import Quotes from './pages/scripts/quotes';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Welcome to react</h1>
-    </div>
+   <Router>
+    <Routes>
+      <Route path='/' element={<Quotes/>}/>
+    </Routes>
+   </Router>
   );
 }
 
