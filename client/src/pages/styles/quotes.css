@@ -1,14 +1,13 @@
 .quotepage{
     height: 97vh;
     width: 100%;
-    background-color: red;
     text-align: center;
     display: flex;
     justify-content: center;
+    background-color: rgb(228, 233, 245);
    
 }
 .mainmiddlebox{
-    background-color: green;
     width: 70%;
     display: grid;
     grid-template-rows: 20% 50%;
@@ -17,22 +16,20 @@
 
 .pagetitle{
     width: 100%;
-    background-color: blue;
     justify-content: center;
     text-align: center;
 }
 .quote{
-    background-color: yellow;
+    background-color: rgb(181, 232, 229);
     display: grid;
     grid-template-rows: 85% 15%;
+    border-radius: 17px;
 }
 
 .quotetext{
-    background-color: aliceblue;
     
 }
 .quotebtn{
-    background-color: beige;
     text-align: right;
 }
 
@@ -40,8 +37,21 @@
     width: 20%;
     height: 100%;
     font-size: 20px;
-    margin-right: 20px;
+   
 }
 #nextbtn:hover{
     cursor: pointer;
+}
+
+#pagetitle{
+    font-size: 60px;
+}
+
+#quotetextdesc{
+    font-size: 37px;
+    font-weight: 100;
+}
+#quoteauthordesc{
+    font-size: 27px;
+    font-weight: 700;
 }
